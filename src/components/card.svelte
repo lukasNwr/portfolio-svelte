@@ -1,74 +1,54 @@
 <script>
-  import FaArrowRight from "svelte-icons/fa/FaArrowRight.svelte";
-  import GitButton from "./git-button.svelte";
+  // @ts-nocheck
+
+  import FaGithubAlt from "svelte-icons/fa/FaGithubAlt.svelte";
+  import GiPlayButton from "svelte-icons/gi/GiPlayButton.svelte";
+  import CardButton from "./cardButton.svelte";
+
+  export var github = false;
+  export var livePage = false;
+  export var imageName;
+  export var description;
+  export var title;
+  export var gitUrl;
+  export var liveUrl;
 </script>
 
 <div class="card">
   <div class="content-wrapper">
     <!-- svelte-ignore a11y-img-redundant-alt -->
-    <img
-      src="/emdit-welcome-big.png"
-      alt="poject-image"
-      class="project-image"
-    />
+    <img src="/{imageName}.png" alt="poject-image" class="project-image" />
 
     <div class="text-wrapper">
-      <span class="title">This is some title</span>
-      <span class="project-description"
-        >This is some short descriptioin of the project</span
-      >
+      <span class="title">{title}</span>
+      <span class="project-description">{description}</span>
     </div>
-    <div class="more">
-      <span class="more-info"> More info </span>
+    <div class="buttons">
+      {#if livePage}
+        <CardButton buttonText="Live Page" url={liveUrl}>
+          <GiPlayButton />
+        </CardButton>
+      {/if}
+      {#if github}
+        <CardButton buttonText="Code" url={gitUrl}>
+          <FaGithubAlt />
+        </CardButton>
+      {/if}
     </div>
   </div>
 </div>
 
 <style>
-  .more {
-    color: var(--secondary-text);
-    font-size: 1rem;
-    position: relative;
+  .buttons {
+    width: 100%;
     display: flex;
-    align-items: start;
-    cursor: pointer;
-    height: full;
-    width: 100%;
+    justify-content: start;
+    gap: 2rem;
   }
-
-  .more-info {
-    position: relative;
-    transition: color 0.2s ease-in-out;
-  }
-
-  .more-info::after {
-    color: var(--secondary-text);
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    top: 1.3rem;
-    left: 0;
-    bottom: 0;
-    background-color: white;
-    transform-origin: bottom left;
-    transform: scaleX(0);
-    transition: all 0.2s ease-in-out;
-  }
-
-  .more-info:hover {
-    color: white;
-  }
-
-  .more-info:hover::after {
-    transform: scaleX(1);
-    color: white;
-  }
-
   .card {
     position: relative;
     width: 300px;
-    height: 350px;
+    height: 380px;
     background-color: rgba(39, 39, 39, 0.4);
     border-radius: 10px;
     padding: 1rem;
@@ -80,8 +60,7 @@
 
   .card:hover {
     border: 1px solid rgba(255, 255, 255, 0.25);
-    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.02);
-    background-color: rgba(39, 39, 39, 0.6);
+    background-color: rgba(45, 45, 45, 0.6);
 
     /* background-color: rgba(255, 255, 255, 0.015); */
   }

@@ -34,25 +34,6 @@
     text-align: left;
   }
 
-  /* .goto {
-    position: absolute;
-    bottom: 1rem;
-  }
-
-  .goto > * {
-    color: var(--secondary-text);
-    transition: color 0.2s ease-in-out;
-    cursor: pointer;
-  }
-
-  .goto:hover > * {
-    color: white;
-  }
-
-  .chevron-down {
-    height: 3rem;
-  } */
-
   .hero {
     position: relative;
     height: 100vh;

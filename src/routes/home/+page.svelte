@@ -48,11 +48,11 @@
     /* background: linear-gradient(to right, rgb(244, 218, 47), rgb(133, 74, 251)); */
     background: linear-gradient(
       -45deg,
-      #eed45294,
-      #e98f7370,
-      #e5739f65,
-      #51adcfae,
-      #63d4ba9b
+      #eed452ad,
+      #e98f7385,
+      #e5739f81,
+      #51adcfc0,
+      #63d4bab7
     );
     background-size: 200% 200%;
     height: 20rem;
