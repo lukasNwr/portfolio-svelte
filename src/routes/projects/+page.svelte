@@ -54,21 +54,34 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
   }
 
   .title {
-    width: 50%;
+    width: 60vw;
     color: white;
     font-size: 2.5rem;
     font-family: "Alice";
   }
 
   .cards {
-    width: 65%;
+    width: 65vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
+  }
+
+  @media only screen and (max-width: 1090px) {
+    .cards {
+      width: 80vw;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .title {
+      font-size: 2rem;
+      width: 70vw;
+    }
   }
 </style>

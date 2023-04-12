@@ -122,12 +122,12 @@
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background-color: transparent;
   }
 
   .content-wrapper {
-    width: 50vw;
+    width: 60vw;
   }
 
   .title {
@@ -138,5 +138,15 @@
 
   .about-text {
     color: white;
+  }
+
+  @media screen and (max-width: 600px) {
+    .content-wrapper {
+      width: 70vw;
+    }
+
+    .title {
+      font-size: 3rem;
+    }
   }
 </style>

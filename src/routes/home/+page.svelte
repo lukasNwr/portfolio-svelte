@@ -1,3 +1,4 @@
+<!-- Include the polyfill -->
 <script>
   // @ts-nocheck
 
@@ -9,9 +10,11 @@
   import Projects from "../projects/+page.svelte";
 
   let blob;
+  let currentPage;
 
-  function handlePointerMove(e) {
-    const { clientX, clientY } = e;
+  function handlePointerMove(event) {
+    const { clientX, clientY } = event;
+
     blob.animate(
       {
         left: `${clientX}px`,
@@ -23,20 +26,29 @@
 </script>
 
 <svelte:body on:mousemove={handlePointerMove} />
+<svelte:head>
+  <script src="web-animations.min.js"></script>
+</svelte:head>
 
 <div class="blob-wrapper">
   <div id="blob" bind:this={blob} />
 </div>
 <div id="blur" />
-<Header />
+<Header bind:currentPage />
 <section id="home" class="home" use:scrollRef={"home"}>
-  <Hero />
+  <Hero bind:currentPage />
   <About />
   <Projects />
   <Footer />
 </section>
 
 <style>
+  .home {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
   .blob-wrapper {
     height: 100%;
     width: 100%;
@@ -64,6 +76,7 @@
     translate: -50% -50%;
     border-radius: 50%;
     animation: blob-animation 20s infinite;
+    -webkit-animation: blob-animation 20s infinite;
   }
 
   #blur {
@@ -72,6 +85,7 @@
     position: fixed;
     z-index: -1;
     backdrop-filter: blur(200px);
+    -webkit-backdrop-filter: blur(200px);
   }
 
   @keyframes blob-animation {
