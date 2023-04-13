@@ -3,8 +3,7 @@
 
   import IoIosArrowDown from "svelte-icons/io/IoIosArrowDown.svelte";
   import { scrollTo, setGlobalOptions } from "svelte-scrolling";
-  import { fade } from "svelte/transition";
-  import GitButton from "../../components/git-button.svelte";
+  import { draw, fade, fly, slide } from "svelte/transition";
 
   let scrollY;
   export let currentPage;

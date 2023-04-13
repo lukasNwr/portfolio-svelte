@@ -5,6 +5,7 @@
   import FaGithubAlt from "svelte-icons/fa/FaGithubAlt.svelte";
   import FaLinkedinIn from "svelte-icons/fa/FaLinkedinIn.svelte";
   import { scrollRef } from "svelte-scrolling";
+  import { fade } from "svelte/transition";
 
   function handleEmailClick() {
     const emailAddress = "lukas.novorolnik@gmai.com";
@@ -20,7 +21,7 @@
 <section id="about" class="about" use:scrollRef={"about"}>
   <div class="content-wrapper">
     <h1 class="title">About me</h1>
-    <span class="about-text">
+    <span class="about-text" transition:fade>
       My name is Lukas. I am passionate and slightly introverted person, who
       loves building things. When I was little, I loved building things with
       lego (and to be honest I still kinda do), because it allowed me to express

@@ -1,8 +1,3 @@
-<script>
-  import FaArrowRight from "svelte-icons/fa/FaArrowRight.svelte";
-  import GitButton from "./git-button.svelte";
-</script>
-
 <div class="more">
   <span class="more-info"> More info </span>
 </div>

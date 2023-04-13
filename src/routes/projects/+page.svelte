@@ -8,17 +8,8 @@
   <h3 class="title">Some of my works...</h3>
   <div class="cards">
     <Card
-      title="Emdit"
-      imageName="Emdit_welcome_1"
-      github={true}
-      livePage={true}
-      description="Emdit is a simple online editor for markdown text with live previews, importing and exporting files and simple and intuitive UI."
-      gitUrl="https://github.com/lukasNwr/markdown-editor/tree/main"
-      liveUrl="https://markdown-editor-cyan.vercel.app/"
-    />
-    <Card
       title="Project Ellen"
-      imageName="ellen"
+      imageName="project-ellen-tn"
       github={true}
       livePage={false}
       description="Project Ellen is a simple 2D action game in style the old Alien Breed games, where you have through the level to kill the boss and save the space station!"
@@ -26,22 +17,31 @@
       liveUrl=""
     />
     <Card
-      title="Humanoid Robot"
-      imageName="robot_1"
+      title="Books App"
+      imageName="books-tn"
       github={true}
-      livePage={true}
-      description="This project was done as a school assignment. The goal was to create a website that would allow to create animation for 3D robot and then play, export and import this animation."
-      gitUrl="https://glitch.com/edit/#!/pg-lukasnovorolnik"
-      liveUrl="https://pg-lukasnovorolnik.glitch.me"
+      livePage={false}
+      description="Books is a simple Flutter application for searching books on Google Books. It allows you to search books by title, author or by using your camera to scan barcode of the book you want to search on Google Books."
+      gitUrl="https://github.com/lukasNwr/Books-app"
+      liveUrl=""
     />
     <Card
       title="Emdit"
-      imageName="Emdit_welcome_1"
+      imageName="emdit-tn"
       github={true}
       livePage={true}
       description="Emdit is a simple online editor for markdown text with live previews, importing and exporting files and simple and intuitive UI."
       gitUrl="https://github.com/lukasNwr/markdown-editor/tree/main"
       liveUrl="https://markdown-editor-cyan.vercel.app/"
+    />
+    <Card
+      title="Humanoid Robot"
+      imageName="robot-tn"
+      github={true}
+      livePage={true}
+      description="This project was done as a school assignment. The goal was to create a website that would allow to create animation for 3D robot and then play, export and import this animation."
+      gitUrl="https://glitch.com/edit/#!/pg-lukasnovorolnik"
+      liveUrl="https://pg-lukasnovorolnik.glitch.me"
     />
   </div>
 </section>
