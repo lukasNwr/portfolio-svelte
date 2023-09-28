@@ -27,7 +27,7 @@
 
 <svelte:body on:mousemove={handlePointerMove} />
 <svelte:head>
-  <script src="web-animations.min.js"></script>
+  <!-- <script src="web-animations.min.js"></script> -->
 </svelte:head>
 
 <div class="blob-wrapper">

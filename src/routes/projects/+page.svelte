@@ -5,7 +5,7 @@
 </script>
 
 <section id="work" class="projects" use:scrollRef={"work"}>
-  <h3 class="title">Some of my works...</h3>
+  <h3 class="title">Some of my projects...</h3>
   <div class="cards">
     <Card
       title="Project Ellen"

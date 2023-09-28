@@ -1,6 +1,5 @@
 <script>
   // @ts-nocheck
-
   import FaGithubAlt from "svelte-icons/fa/FaGithubAlt.svelte";
   import GiPlayButton from "svelte-icons/gi/GiPlayButton.svelte";
   import CardButton from "./cardButton.svelte";
@@ -12,12 +11,19 @@
   export var title;
   export var gitUrl;
   export var liveUrl;
+
+  
+
+  const imageSrc = imageName + ".png";
 </script>
 
 <div class="card">
   <div class="content-wrapper">
+    
+
     <!-- svelte-ignore a11y-img-redundant-alt -->
-    <img src="/{imageName}.png" alt="poject-image" class="project-image" />
+      <img src={imageSrc} class='project-image' alt="project-image"  />
+ 
 
     <div class="text-wrapper">
       <span class="title">{title}</span>
@@ -42,7 +48,7 @@
   .buttons {
     width: 100%;
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     gap: 2rem;
   }
   .card {
